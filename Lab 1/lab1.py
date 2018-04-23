@@ -25,16 +25,16 @@ if __name__ == '__main__':
     dell = Computer("Dell Inspiron", 42, 400, "bullshit", "Toilet paper")
     macbook = Computer()
     xiaomi = Computer("Apple Macbook 13", 47, 1088, "awesome")
-    
+
     print("\n")
     dell.to_string()
     macbook.to_string()
     xiaomi.to_string()
-    
+
     print("\n")
     dell.print_sum()
     macbook.print_sum()
     xiaomi.print_sum()
-    
+
     print("\n")
     Computer.print_static_sum()
