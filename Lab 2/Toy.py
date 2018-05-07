@@ -1,4 +1,4 @@
-from enum import Enum
+from enum import Enum, IntEnum
 
 
 class Size(Enum):
@@ -7,7 +7,7 @@ class Size(Enum):
     big = 3
 
 
-class Age(Enum):
+class Age(IntEnum):
     baby = 1
     preschooler = 2
     schooler = 3
@@ -25,3 +25,6 @@ class Toy:
     age = None
     size = None
     toy_type = None
+
+    def __str__(self):
+        return self.__class__.__name__ + ": " + "Size: " + self.size.name + ", Age: " + self.age.name

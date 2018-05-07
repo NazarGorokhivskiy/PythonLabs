@@ -1,11 +1,3 @@
-from Toy import *
-from Car import *
-from Doll import *
-from SportToy import *
-from Ball import *
-from Hoop import *
-
-
 class GameManager:
     toys = []
 
@@ -13,9 +5,9 @@ class GameManager:
         pass
 
     def sort_by_age(self):
-        self.toys.sort()
+        self.toys.sort(key=lambda toy: toy.age)
 
-    def find_by_group(self, age, size, toy_type):
+    def find_by_group(self, size, age, toy_type):
         founded_toys = []
 
         for toy in self.toys:
@@ -27,16 +19,7 @@ class GameManager:
     def add_toy(self, toy):
         self.toys += toy
 
-
-if __name__ == '__main__':
-    manager = GameManager()
-
-    car = Car(Age.preschooler, Size.small, True)
-    doll = Doll(Age.preschooler, Size.medium, Sex.female)
-    ball = Ball(Age.preschooler, Size.small, False)
-    hoop = Hoop(Age.baby, Size.big, 228)
-
-    manager.toys = [car, doll, ball, hoop]
-
-    print(manager.find_by_group(Size.small, None, None))
-    pass
+    def print_list(self):
+        for toy in self.toys:
+            print(toy)
+        print()

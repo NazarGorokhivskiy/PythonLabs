@@ -10,3 +10,4 @@ class Ball(SportToy):
         self.age = age
         self.sport_type = SportType.ball_game
         self.is_for_football = is_for_football
+
